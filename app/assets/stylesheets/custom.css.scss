@@ -11,7 +11,7 @@ $navbar-default-color: $light-orange;
   float: left;
   margin-right: 10px;
   font-size: 2em;
-  color:#fff;
+  color:#000;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -29,6 +29,12 @@ body{
 
 .nav_item{
   margin-left: 25px;
+  float: left;
+  margin-top: 20px;
+}
+
+.nav_ul_item{
+  padding-left: 25px;
   float: left;
   margin-top: 20px;
 }
