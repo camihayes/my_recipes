@@ -7,8 +7,6 @@ Rails.application.routes.draw do
  resources :recipes do
     member do
       post 'like'
-      post 'review'
-      delete 'review', to: "recipes#deletereview"
     end
   end
   
