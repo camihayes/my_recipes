@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:edit, :update, :show, :like]
+  before_action :set_recipe, only: [:edit, :update, :show, :like, :review]
   before_action :require_user, except: [:show, :index, :like]
   before_action :require_user_like, only: [:like]
   before_action :require_same_user, only: [:edit, :update]
@@ -59,6 +59,22 @@ class RecipesController < ApplicationController
     Recipe.find(params[:id]).destroy
     flash[:success] = "Recipe deleted."
     redirect_to recipes_path
+  end
+  
+  def review
+    review = Review.create(body: params[:body], chef: current_user, recipe: @recipe)
+    if review.valid?
+      flash[:success] = "Thanks for your review!"
+    else
+      flash[:danger] = "Oops! Something went wrong. Make sure you are logged in and review is at least 6 letters long."
+    end
+    redirect_to :back
+  end
+  
+  def deletereview
+    Review.find(params[:revid]).destroy
+    flash[:success] = "Review deleted successfully."
+    redirect_to :back
   end
   
   private

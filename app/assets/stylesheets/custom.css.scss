@@ -1,4 +1,4 @@
-$navbar-default-bg: #50192B;
+$navbar-default-bg: #000;
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
@@ -24,6 +24,7 @@ $navbar-default-color: $light-orange;
 }
 
 body{
+  
   padding-top: 80px;
 }
 
@@ -82,7 +83,9 @@ h2{
 }
 
 .well{
-  background-color: #ededed;
+  background-color: #000;
+  opacity: .7;
+  color: #fff;
 }
 
 input, textarea, select, .uneditable-input{
@@ -109,4 +112,12 @@ span.picture{
 
 .show_recipe{
   margin: 10px 10px 10px 10px;
+}
+
+.jumbotron {
+  color: #fff;
+  background-image: image-url("Tabasco_food.jpg");
+  background-position: 50% 23%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
