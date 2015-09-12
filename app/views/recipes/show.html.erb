@@ -18,7 +18,7 @@
     <div class="show_recipe">
       <%= image_tag(@recipe.picture.url, class:"gravatar") if @recipe.picture? %>
     </div>
-    <div class="well">
+    <div class="well" style="color:#fff">
       <% if @recipe.styles.any? %>
         <p>Styles: <%= render @recipe.styles %></p>
       <% end %>
