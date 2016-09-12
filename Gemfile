@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.3.1'
 gem 'rails', '4.2.1'
 
 gem 'sass-rails', '~> 5.0'
@@ -20,7 +20,7 @@ gem 'fog', '1.23.0'
 
 gem 'spring', group: :development
 
-group :development, :test do 
+group :development, :test do
   gem 'sqlite3'
   gem 'pry'
 end
